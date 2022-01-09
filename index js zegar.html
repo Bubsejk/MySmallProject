@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<Html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Javascript zegar</title>
+
+<script type="text/javascript"> // ustawienia czasu
+    function zegarmech()
+    {
+    var czas = new Date();
+    var rok = czas.getFullYear();
+    var miesiac = czas.getMonth()+1;
+    var dzien = czas.getDay();
+    var godzina = czas.getHours();
+    var minuty = czas.getMinutes();
+    var sekundy = czas.getSeconds();
+    if(godzina<10) godzina = "0" + godzina;
+    if(minuty<10) minuty = "0" + minuty;
+    if(sekundy<10) sekundy = "0" + sekundy;
+
+    document.getElementById("zegar").innerHTML = dzien + "/" + miesiac + "/" + rok + " | " + godzina + ":" + minuty + ":" + sekundy ; // Wypisanie czaszu
+
+    setTimeout("zegarmech()",1000); // po sekundzie uruchom funkcje
+    }
+</script>
+
+</head>
+<body onload="zegarmech();">
+
+    <div id="zegar">
+        
+    </div>
+
+</body>
+</Html>

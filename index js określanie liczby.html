@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<Html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Główna Strona</title>
+
+<script type="text/javascript">
+    function check()
+    {
+        var liczba = document.getElementById("Pole").value;
+
+        if (liczba>0) document.getElementById("wynik").innerHTML = "Dodatnia";
+        else if (liczba<0) document.getElementById("wynik").innerHTML = "Ujemna";
+        else if (liczba==0) document.getElementById("wynik").innerHTML = "Zero";
+        else document.getElementById("wynik").innerHTML = "To nie jest Liczba";
+    }
+</script>
+
+</head>
+<body>
+    <input type="text" id="Pole" />
+    <input type="submit" value="Sprawdź" onclick="check()" />
+<div id="wynik">
+
+</div>
+
+</body>
+</Html>
