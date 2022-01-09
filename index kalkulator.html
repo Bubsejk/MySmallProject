@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<Html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Java Kalkulator</title>
+
+<script type="text/javascript">
+    function dodaj()
+    {
+        var liczba1 = document.getElementById("Pole1").value;
+        var liczba1 = parseInt(liczba1);
+        var liczba2 = document.getElementById("Pole2").value;
+        var liczba2 = parseInt(liczba2);
+        var wynik = liczba1 + liczba2;
+        
+        document.getElementById("wynik").innerHTML = "Wynik = " + wynik;
+    }
+    function odejmi()
+    {
+        var liczba1 = document.getElementById("Pole1").value;
+        var liczba1 = parseInt(liczba1);
+        var liczba2 = document.getElementById("Pole2").value;
+        var liczba2 = parseInt(liczba2);
+        var wynik = liczba1 - liczba2;
+        
+        document.getElementById("wynik").innerHTML = "Wynik = " + wynik;
+    }
+    function Mnożenie()
+    {
+        var liczba1 = document.getElementById("Pole1").value;
+        var liczba1 = parseInt(liczba1);
+        var liczba2 = document.getElementById("Pole2").value;
+        var liczba2 = parseInt(liczba2);
+        var wynik = liczba1 * liczba2;
+        
+        document.getElementById("wynik").innerHTML = "Wynik = " + wynik;
+    }
+    function Dzielenie()
+    {
+        var liczba1 = document.getElementById("Pole1").value;
+        var liczba1 = parseInt(liczba1);
+        var liczba2 = document.getElementById("Pole2").value;
+        var liczba2 = parseInt(liczba2);
+        var wynik = liczba1 / liczba2;
+        
+        document.getElementById("wynik").innerHTML = "Wynik = " + wynik;
+    }
+    function Pierwiastek()
+    {
+        var liczba3 = document.getElementById("Pole3").value;
+        var liczba3 = parseInt(liczba3);
+        var wynik2 = Math.sqrt(liczba3);
+        
+        document.getElementById("wynik").innerHTML = "Wynik = " + wynik2;
+    }
+</script>
+
+</head>
+<body>
+
+<input type="text" id="Pole1" />
+<input type="text" id="Pole2" />
+<input type="submit" value="Dodaj" onclick="dodaj()" />
+<input type="submit" value="Odejmi" onclick="odejmi()" />
+<input type="submit" value="Mnożenie" onclick="Mnożenie()" />
+<input type="submit" value="Dzielenie" onclick="Dzielenie()" />
+
+<div id="wynik"></div>
+
+<input type="text" id="Pole3" />
+<input type="submit" value="Pierwiastek" onclick="Pierwiastek()" />
+
+<div id="wynik2"></div>
+
+</body>
+</Html>
