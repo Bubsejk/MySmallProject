@@ -1,3 +1,2 @@
-# -School-work
-Projects make in schools
+# My Work
 Made by Daniel Bułanowski
